@@ -4,7 +4,10 @@ import { LayoutComponent } from './layout.component';
 import { ComponentsModule } from './components/components.module';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { AppRoutingModule } from 'src/app/app-routing.module';
+import { RouterModule } from '@angular/router';
 
+import {MatSidenavModule} from '@angular/material/sidenav';
 
 
 @NgModule({
@@ -13,7 +16,10 @@ import { FooterComponent } from './components/footer/footer.component';
   ],
   imports: [
     CommonModule,
-    ComponentsModule
+    ComponentsModule,
+    RouterModule,
+    MatSidenavModule
+
   ],
   exports:[
     LayoutComponent
