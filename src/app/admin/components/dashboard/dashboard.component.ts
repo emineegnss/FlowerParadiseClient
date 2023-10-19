@@ -17,8 +17,8 @@ export class DashboardComponent implements OnInit {
     //   a.delay=4,
       
     
-    this.alertifyService.message("Başarılı", {
-      messageType: MessageType.Success,
+    this.alertifyService.message("Başarısız", {
+      messageType: MessageType.Error,
       position : Position.BottomRight,
       delay:2,
     });

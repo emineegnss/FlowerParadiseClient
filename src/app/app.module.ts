@@ -8,6 +8,7 @@ import { UiModule } from './ui/ui.module';
 import { ComponentsModule } from './admin/layout/components/components.module';
 import { HeaderComponent } from './admin/layout/components/header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AdminModule,
     UiModule,
     BrowserAnimationsModule,
+    ToastrModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
