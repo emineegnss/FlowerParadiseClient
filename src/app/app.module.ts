@@ -9,6 +9,7 @@ import { ComponentsModule } from './admin/layout/components/components.module';
 import { HeaderComponent } from './admin/layout/components/header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ToastrModule } from 'ngx-toastr';
     AdminModule,
     UiModule,
     BrowserAnimationsModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    NgxSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
