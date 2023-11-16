@@ -1,19 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { NgxSpinnerService } from 'ngx-spinner';
+import { BaseComponent, SpinnerType } from 'src/app/base/base.component';
 
 @Component({
   selector: 'app-orders',
   templateUrl: './orders.component.html',
   styleUrls: ['./orders.component.css']
 })
-export class OrdersComponent implements OnInit{
-  constructor(private spinner:NgxSpinnerService){}
+export class OrdersComponent extends BaseComponent implements OnInit{
+  constructor(spinner:NgxSpinnerService){
+    super(spinner)
+  }
   ngOnInit(): void {
-    this.spinner.show();
-    setTimeout(() => {
-      /** spinner ends after 5 seconds */
-      this.spinner.hide();
-    }, 1000);
+    this.showSpinner(SpinnerType.BallSpin);
   }
 
 }

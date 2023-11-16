@@ -10,7 +10,7 @@ export class AppComponent implements OnInit{
   title = 'FlowerParadiseClient';
   constructor(private customToastr:CustomToastrService){}
   ngOnInit(): void {
-    this.customToastr.message("Başlık","Alt Başlık",{messageType:ToastrMessageType.Success,position:ToastrPosition.BottomFullWidth})
+    //this.customToastr.message("Başlık","Alt Başlık",{messageType:ToastrMessageType.Success,position:ToastrPosition.BottomFullWidth})
   }
   
 }
