@@ -14,4 +14,6 @@ export class AppComponent implements OnInit{
   }
   
 }
-
+$.get("https://localhost:7269/api/Flowers",data =>{
+  console.log(data)
+})
