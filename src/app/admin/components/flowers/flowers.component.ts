@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { BaseComponent, SpinnerType } from 'src/app/base/base.component';
-import { Flower } from 'src/app/contracts/flower';
+import { Create_Flower } from 'src/app/contracts/create_flower';
 import { HttpClientService } from 'src/app/services/common/http-client.service';
 
 @Component({
@@ -19,7 +19,7 @@ export class FlowersComponent extends BaseComponent implements OnInit {
   ngOnInit(): void {
     this.showSpinner(SpinnerType.BallAtom);
     this.httpClientService
-      .get<Flower[]>({
+      .get<Create_Flower[]>({
         controller: 'flowers',
       })
       .subscribe((data) => console.log(data));
