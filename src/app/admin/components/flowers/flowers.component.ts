@@ -18,11 +18,11 @@ export class FlowersComponent extends BaseComponent implements OnInit {
   }
   ngOnInit(): void {
     this.showSpinner(SpinnerType.BallAtom);
-    this.httpClientService
-      .get<Create_Flower[]>({
-        controller: 'flowers',
-      })
-      .subscribe((data) => console.log(data));
+    // this.httpClientService
+    //   .get<Create_Flower[]>({
+    //     controller: 'flowers',
+    //   })
+    //   .subscribe((data) => console.log(data));
 
     // this.httpClientService
     //   .post(
