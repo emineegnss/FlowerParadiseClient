@@ -26,6 +26,22 @@ export class CreateComponent extends BaseComponent implements OnInit {
     create_flower.stock = parseInt(stock.value);
     create_flower.price = parseFloat(price.value);
     create_flower.speciesId = '';
+    if(!name.value){
+      this.alertify.message("Name Alanını doldurunuz",{
+        dismissOther: true,
+        messageType: MessageType.Warning,
+        position: Position.TopRight
+      });
+      return;
+    }
+    if(parseInt(stock.value)<0){
+      this.alertify.message("Stock Alanını 0 dan büyük olmalıdır",{
+        dismissOther: true,
+        messageType: MessageType.Warning,
+        position: Position.TopRight
+      });
+      return;
+    }
     this.flowerService.create(create_flower, () => {
       this.hideSpinner(SpinnerType.BallSpin);
       this.alertify.message("Ürün Başarılı Şekilde Eklenmiştir",{
@@ -33,7 +49,13 @@ export class CreateComponent extends BaseComponent implements OnInit {
         messageType: MessageType.Success,
         position: Position.TopRight
       });
-    } 
+    } ,errorMessage=>{
+      this.alertify.message(errorMessage,{
+        dismissOther:true,
+        messageType:MessageType.Error,
+        position:Position.TopRight
+      })
+    }
      );
 
   }
